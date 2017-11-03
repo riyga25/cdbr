@@ -9,17 +9,19 @@ if ($_SESSION['logged_in']==1) {
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Авторизация</title>
+
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
     <link rel="stylesheet"
           href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.3/dist/css/bootstrap-material-design.min.css"
           integrity="sha384-k5bjxeyx3S5yJJNRD1eKUMdgxuvfisWKku5dwHQq9Q/Lz6H8CyL89KF52ICpX4cL" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Авторизация</title>
 </head>
 
 <body>
@@ -55,6 +57,10 @@ if ($_SESSION['logged_in']==1) {
         </div>
         <button type="submit" class="btn btn-primary">Войти</button>
     </form>
+    <div>
+        Email: test@test.ru<br>
+        Password: test
+    </div>
 </div>
 <div class="footer">
 
