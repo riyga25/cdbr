@@ -10,7 +10,7 @@ require_once 'db.php';
 if (! empty($_POST)) {
     $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
     $pass = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
-    $pass = crypt($pass, '$s');
+    $pass = crypt($pass, '2y');
 }
 
     $query = $pdo->prepare("SELECT * FROM users WHERE email='$email'");
