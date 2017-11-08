@@ -1,14 +1,17 @@
 <?php
 //Авторизация
 
-session_start();
+if (! isset($_SESSION)) {
+    session_start();
+}
 
 require_once 'db.php';
 
-    $email=filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-    $pass=filter_var($_POST['password'], FILTER_SANITIZE_STRING);
-    $pass=crypt($pass, '$s');
-
+if (! empty($_POST)) {
+    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+    $pass = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+    $pass = crypt($pass, '$s');
+}
 
     $query = $pdo->prepare("SELECT * FROM users WHERE email='$email'");
     $query->execute();
